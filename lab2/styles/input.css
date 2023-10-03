@@ -1,11 +1,11 @@
 body {
     margin: 0;
     font-family: 'Noto Serif', serif;
-    background-image: url(../images/input.jpg);
+    background-image: url(../images/inputForm.png);
 }
 
 main {
-    background-color: rgb(189, 200, 241);
+    background-color: rgb(227, 196, 182);
     margin: 10% 30%;
     max-height: 600px;
     max-width: 600px;
