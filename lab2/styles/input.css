@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: 'Noto Serif', serif;
+    background-image: url(../images/input.jpg);
+}
+
+main {
+    background-color: rgb(189, 200, 241);
+    margin: 10% 30%;
+    max-height: 600px;
+    max-width: 600px;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: rgb(60, 29, 29);
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-label {
+    display: block;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    color: rgb(60, 29, 29);
+}
