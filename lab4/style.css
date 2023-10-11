@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: 'Noto Serif', serif;
+    background-color: rgb(199, 217, 222);
+}
+
+h2 {
+    margin-bottom: 40px;
+    color: rgb(60, 29, 29);
+}
+
+main {
+    text-align: left;
+    padding: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+.form-label {
+    display: block;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    color: rgb(60, 29, 29);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 30%;
+    height: 20%;
+}
+
+
+input[type="submit"] {
+    background-color: #005551;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+}
+
+.button{
+    margin-top: 5px;
+    background-color: #005551;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+
+.button:hover {
+    background-color: #005551;
+}
