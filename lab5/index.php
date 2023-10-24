@@ -177,7 +177,7 @@ else {
                 <?php 
                     while($name = mysqli_fetch_assoc($results)) { 
                     ?>
-                        <img src="images/<?php echo $name['images'];?>" />
+                        <img title="<?php echo $name['images']; ?>" src="images/<?php echo $name['images'];?>" />
                     <?php
                     }
                 ?>
