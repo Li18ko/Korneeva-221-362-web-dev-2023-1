@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Корнеева lab6 Результаты JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+    <main>
+        <h1>Реализация различных функций с помощью JavaScript</h1>
+        <div class="form">
+            <h2>Возведение в степень</h2>
+            <input class="input-field" type="number" id="powBase" placeholder="Основание">
+            <input class="input-field" type="number" id="powExponent" placeholder="Показатель степени">
+
+            
+            <div class="button-container">
+                <button id="calculateButton">Вычислить</button>
+            </div>
+            <p id="powResult"></p>
+        </div>
+
+        <div class="form">
+            <h2>Нахождение НОД</h2>
+            <input class="input-field" type="number" id="gcd_a" placeholder="Число a">
+            <input class="input-field" type="number" id="gcd_b" placeholder="Число b">
+
+            <div class="button-container">
+                <button id="calculateGcd">Вычислить</button>
+            </div>
+            <p id="gcd_result"></p>
+        </div>
+
+        <div class="form">
+            <h2>Наименьшая цифра</h2>
+            <input class="input-field" type="number" id="min_digit" placeholder="Введите число">
+
+            <div class="button-container">
+                <button id="findMinDigit">Вычислить</button>
+            </div>
+            <p id="min_digit_result"></p>
+        </div>
+
+        <div class="form">
+            <h2>Pluralization</h2>
+            <input class="input-field" type="number" id="pluralize" placeholder="Введите число">
+
+            <div class="button-container">
+                <button id="generatePluralizedString">Сгенерировать строку</button>
+            </div>
+            <p id="pluralize_result"></p>
+        </div>
+
+        <div class="form"><br>
+            <h2>Числа Фибоначчи</h2>
+            <input class="input-field" type="number" id="fibb" placeholder="Введите число">
+
+            <div class="button-container">
+                <button id="calculateFibb">Вычислить</button>
+            </div>
+            <p id="fibb_result"></p>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
