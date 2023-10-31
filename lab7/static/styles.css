@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    background-color: #dfb1b1;
+
+}
+
+.calc-container {
+    background-color: #a2a2a2;
+    border: 2px solid #1a1414;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.screen {
+    background-color: #fff;
+    border: 1px solid #e5cbcb;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    text-align: right;
+    font-size: 24px;
+}
+
+.key.digit {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+    margin: 8px 13px;
+    border: 1px solid #a29898;
+    border-radius: 40%;
+    background-color: #e0acac;
+    color: #000;
+    cursor: pointer;
+}
+
+.key.operation {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+    margin: 5px 13px;
+    border: 1px solid #ccc;
+    border-radius: 40%;
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.key.clear {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+    margin: 5px 13px;
+    border: 1px solid #a29898;
+    border-radius: 40%;
+    background-color: #e0acac;
+    color: #000;
+    cursor: pointer;
+}
+
+
+.key.bracket {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+    margin: 5px 13px;
+    border: 1px solid #ccc;
+    border-radius: 40%;
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.key.result {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+    margin: 5px 13px;
+    border: 1px solid #ccc;
+    border-radius: 40%;
+    background-color: #48b48a;
+    color: #fff;
+    cursor: pointer;
+}
