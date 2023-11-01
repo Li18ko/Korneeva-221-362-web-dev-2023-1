@@ -1,7 +1,6 @@
 body {
     margin: 0;
-    background-color: #dbcaca;
-
+    background-color: #e3d7d7;
 }
 
 .calc-container {
@@ -9,8 +8,8 @@ body {
     border: 2px solid #1a1414;
     border-radius: 10px;
     padding: 10px;
-    width: 300px;
-    margin: 20px auto;
+    width: 500px;
+    margin: 120px auto;
 }
 
 .screen {
@@ -24,7 +23,26 @@ body {
     font-size: 24px;
 }
 
-.key.digit {
+.buttons {
+    display: flex;
+}
+
+.digits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-top: 5px;
+}  
+
+.other {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}  
+
+.key {
     width: 70px;
     height: 70px;
     font-size: 28px;
@@ -32,54 +50,32 @@ body {
     border: 1px solid #a29898;
     border-radius: 40%;
     background-color: #e0acac;
-    color: #000;
-    cursor: pointer;
 }
 
-.key.operation {
-    width: 70px;
-    height: 70px;
-    font-size: 28px;
-    margin: 5px 13px;
+.operation {
     border: 1px solid #ccc;
-    border-radius: 40%;
     background-color: #ccc;
     color: #000;
     cursor: pointer;
 }
 
-.key.clear {
-    width: 70px;
-    height: 70px;
-    font-size: 28px;
-    margin: 5px 13px;
+.clear {
     border: 1px solid #a29898;
-    border-radius: 40%;
     background-color: #e0acac;
     color: #000;
     cursor: pointer;
 }
 
 
-.key.bracket {
-    width: 70px;
-    height: 70px;
-    font-size: 28px;
-    margin: 5px 13px;
+.bracket {
     border: 1px solid #ccc;
-    border-radius: 40%;
     background-color: #ccc;
     color: #000;
     cursor: pointer;
 }
 
-.key.result {
-    width: 70px;
-    height: 70px;
-    font-size: 28px;
-    margin: 5px 13px;
+.result {
     border: 1px solid #ccc;
-    border-radius: 40%;
     background-color: #48b48a;
     color: #fff;
     cursor: pointer;
