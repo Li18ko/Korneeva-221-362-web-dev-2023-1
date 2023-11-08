@@ -139,7 +139,7 @@ function handleSearchInput() {
 
     if (query.length > 0) {
         // Отправить запрос на автодополнение
-        fetch(`https://cat-facts-api.std-900.ist.mospolytech.ru/autocomplete?q=${query}`)
+        fetch(`http://cat-facts-api.std-900.ist.mospolytech.ru/autocomplete?q=${query}`)
             .then(response => response.json())
             .then(data => {
                 // Отобразить рекомендации в выпадающем списке
