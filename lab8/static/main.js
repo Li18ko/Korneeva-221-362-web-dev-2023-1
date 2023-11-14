@@ -104,17 +104,15 @@ function renderRecords(records) {
     }
 }
 
-function downloadData(page = 1, searchQuery = '') {
+function downloadData(page = 1) {
+    let searchQuery = document.querySelector('.search-field').value;
+
     let factsList = document.querySelector('.facts-list');
     let url = new URL(factsList.dataset.url);
     let perPage = document.querySelector('.per-page-btn').value;
     url.searchParams.append('page', page);
     url.searchParams.append('per-page', perPage);
-    
-    // Если есть поисковый запрос, добавьте его к URL
-    if (searchQuery) {
-        url.searchParams.append('q', searchQuery);
-    }
+    url.searchParams.append('q', searchQuery);
 
     let xhr = new XMLHttpRequest();
     xhr.open('GET', url);
@@ -130,7 +128,7 @@ function downloadData(page = 1, searchQuery = '') {
 function searchRecords() {
     let searchInput = document.querySelector('.search-field');
     let searchQuery = searchInput.value.trim();
-    downloadData(1, searchQuery);
+    downloadData(searchQuery);
 }
 
 function handleSearchInput() {
