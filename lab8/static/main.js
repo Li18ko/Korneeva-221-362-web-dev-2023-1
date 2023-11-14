@@ -108,7 +108,7 @@ function downloadData(page = 1) {
     let searchQuery = document.querySelector('.search-field').value;
 
     let factsList = document.querySelector('.facts-list');
-    let url = new URL(factsList.dataset.url.replace('http://', 'https://'));
+    let url = new URL(factsList.dataset.url);
     let perPage = document.querySelector('.per-page-btn').value;
     url.searchParams.append('page', page);
     url.searchParams.append('per-page', perPage);
