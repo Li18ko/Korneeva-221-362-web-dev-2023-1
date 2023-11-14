@@ -1,3 +1,4 @@
+/*Создает кнопку пагинации с указанным номером страницы и классами.*/
 function createPageBtn(page, classes=[]) {
     let btn = document.createElement('button');
     classes.push('btn');
@@ -9,6 +10,7 @@ function createPageBtn(page, classes=[]) {
     return btn;
 }
 
+/*Отображает элементы пагинации на основе переданных данных.*/
 function renderPaginationElement(info) {
     let btn;
     let paginationContainer = document.querySelector('.pagination');
@@ -39,10 +41,13 @@ function renderPaginationElement(info) {
     paginationContainer.append(btn);
 }
 
+/*Обрабатывает событие изменения количества записей на странице.
+Вызывает функцию downloadData с номером страницы 1 для загрузки данных с новыми настройками.*/
 function perPageBtnHandler(event) {
     downloadData(1);
 }
 
+/*Устанавливает информацию о текущей странице, количестве записей и интервале на странице.*/
 function setPaginationInfo(info) {
     document.querySelector('.total-count').innerHTML = info.total_count;
     let start = info.total_count > 0 ? (info.current_page - 1)*info.per_page + 1 : 0;
@@ -51,6 +56,8 @@ function setPaginationInfo(info) {
     document.querySelector('.current-interval-end').innerHTML = end;
 }
 
+/*Обрабатывает событие нажатия на кнопку пагинации.
+Вызывает функцию downloadData с номером страницы, соответствующим нажатой кнопке, и перемещается вверх страницы.*/
 function pageBtnHandler(event) {
     if (event.target.dataset.page) {
         downloadData(event.target.dataset.page);
@@ -58,6 +65,7 @@ function pageBtnHandler(event) {
     }
 }
 
+/*Создает и возвращает HTML-элемент для отображения имени автора на основе переданной записи.*/
 function createAuthorElement(record) {
     let user = record.user || {'name': {'first': '', 'last': ''}};
     let authorElement = document.createElement('div');
@@ -66,6 +74,7 @@ function createAuthorElement(record) {
     return authorElement;
 }
 
+/*Создает и возвращает HTML-элемент для отображения количества голосов "за" на основе переданной записи.*/
 function createUpvotesElement(record) {
     let upvotesElement = document.createElement('div');
     upvotesElement.classList.add('upvotes');
@@ -73,6 +82,7 @@ function createUpvotesElement(record) {
     return upvotesElement;
 }
 
+/*Создает и возвращает HTML-элемент, представляющий подвал элемента списка фактов, содержащий информацию об авторе и количестве голосов.*/
 function createFooterElement(record) {
     let footerElement = document.createElement('div');
     footerElement.classList.add('item-footer');
@@ -81,6 +91,7 @@ function createFooterElement(record) {
     return footerElement;
 }
 
+/*Создает и возвращает HTML-элемент, представляющий содержание элемента списка фактов, содержащий текст факта.*/
 function createContentElement(record) {
     let contentElement = document.createElement('div');
     contentElement.classList.add('item-content');
@@ -88,6 +99,7 @@ function createContentElement(record) {
     return contentElement;
 }
 
+/*Создает и возвращает HTML-элемент, представляющий элемент списка фактов, включая контент и подвал.*/
 function createListItemElement(record) {
     let itemElement = document.createElement('div');
     itemElement.classList.add('facts-list-item');
@@ -96,6 +108,7 @@ function createListItemElement(record) {
     return itemElement;
 }
 
+/*Отображает список записей, очищая текущий контент в списке фактов и добавляя новые элементы списка для каждой записи.*/
 function renderRecords(records) {
     let factsList = document.querySelector('.facts-list');
     factsList.innerHTML = '';
@@ -104,11 +117,15 @@ function renderRecords(records) {
     }
 }
 
+/*Загружает данные с сервера на основе указанной страницы, текущего поискового запроса и количества записей на странице.
+Вызывает функции для отображения полученных записей, обновления информации о пагинации и отображения кнопок пагинации.*/
 function downloadData(page = 1) {
     let searchQuery = document.querySelector('.search-field').value;
 
     let factsList = document.querySelector('.facts-list');
     let url = new URL(factsList.dataset.url);
+    /*let url = new URL(factsList.dataset.url.replace('http://', 'https://'));*/
+
     let perPage = document.querySelector('.per-page-btn').value;
     url.searchParams.append('page', page);
     url.searchParams.append('per-page', perPage);
@@ -125,12 +142,15 @@ function downloadData(page = 1) {
     xhr.send();
 }
 
+/*Инициирует поиск записей на основе текущего введенного запроса поиска.*/
 function searchRecords() {
     let searchInput = document.querySelector('.search-field');
     let searchQuery = searchInput.value.trim();
     downloadData(searchQuery);
 }
 
+/*Обрабатывает ввод в поле поиска, отправляя запрос на автодополнение на основе введенного запроса.
+Отображает рекомендации автодополнения и устанавливает обработчики клика для выбора рекомендаций.*/
 function handleSearchInput() {
     const searchInput = document.querySelector('.search-field');
     const query = searchInput.value.trim();
@@ -167,6 +187,10 @@ function handleSearchInput() {
     }
 }
 
+/*Привязывает обработчики событий к различным элементам после загрузки окна.
+Вызывает функцию downloadData для начальной загрузки данных.
+Устанавливает обработчики событий для кнопок пагинации, изменения количества записей на странице, 
+клика по кнопке поиска и изменения ввода поиска.*/
 window.onload = function () {
     downloadData();
 
