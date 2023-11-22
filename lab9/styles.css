@@ -21,11 +21,44 @@ main {
     padding: 20px;
 }
 
-footer {
+.footer {
     background-color: #5c4b4b;
     color: #fff;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 2% 0;
+    margin-top: 2%;
+}
+
+.contact-form {
+    background-color: #f2f2f2;
+    padding: 40px;
+    border-radius: 40px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.form-field {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 90%;
+    height: 25px;
+}
+
+.btn {
+    text-decoration: none;
+    color: #ffffff; 
+    font-weight: bold;
+    background-color: #333333; 
+    padding: 5%;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0 auto; 
+}
+
+.btn:hover {
+    transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+    color: #ebdddd; 
+    background-color: #5c4b4b;
 }
