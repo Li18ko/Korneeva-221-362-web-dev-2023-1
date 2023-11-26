@@ -67,6 +67,21 @@ footer {
     text-align: center;
 }
 
+.image-containers img {
+    width: 50%;
+    height: 50%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image-containers{
+    text-align: center;
+}
+
+.product-details{
+    text-align: center;
+}
+
 .product {
     border: 1px solid #ccc;
     padding: 10px;

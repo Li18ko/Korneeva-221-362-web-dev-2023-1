@@ -3,9 +3,6 @@
 include "db.php";
 $query = "SELECT * FROM products WHERE id = 1 or id = 2";
 $products = mysqli_query($mysql, $query);
-
-$pageTitle = "Корнеева Е.С. 221-362";
-$currentDate = date('d.m.Y в H:i:s');
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +12,7 @@ $currentDate = date('d.m.Y в H:i:s');
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $pageTitle ?></title>
+    <title>Корнеева Е.С. 221-362</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet" />

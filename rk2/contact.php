@@ -1,8 +1,3 @@
-<?php
-$pageTitle = "Корнеева Е.С. 221-362";
-$currentDate = date('d.m.Y в H:i:s');
-?>
-
 <!DOCTYPE html>
 
 <html lang="ru">

@@ -3,10 +3,6 @@
 include "db.php";
 $query = "SELECT * FROM products";
 $products = mysqli_query($mysql, $query);
-
-
-$pageTitle = "Корнеева Е.С. 221-362";
-$currentDate = date('d.m.Y в H:i:s');
 ?>
 
 <!DOCTYPE html>

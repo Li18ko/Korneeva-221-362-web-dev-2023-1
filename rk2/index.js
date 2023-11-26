@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     productButtons.forEach(button => {
         button.addEventListener('click', function () {
-            const productId = this.closest('.product').getAttribute('data-product-id');
+            const productId = this.closest('.view-details').getAttribute('data-product-id');
             window.location.href = 'product_details.php?id=' + productId;
         });
     });

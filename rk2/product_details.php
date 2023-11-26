@@ -4,15 +4,14 @@ include "db.php";
 
 if (isset($_GET['id'])) {
     $productId = $_GET['id'];
-    $query = "SELECT * FROM podrobno WHERE id = $productId";
-    $product = mysqli_query($mysql, $query);
+    $product = mysqli_query($mysql, "SELECT * FROM products WHERE id = $productId");
 
     if ($product && $productData = mysqli_fetch_assoc($product)) {
-        $pageTitle = $productData['name'];
-        $currentDate = date('d.m.Y в H:i:s');
+        $productName = $productData['name'];
         $productCount = $productData['count'];
         $productPrice = $productData['price'];
-        $productDescrtiptionBig = $productData['descrtiptionBig'];
+        $productDescrtiptionBig = $productData['descriptionBig'];
+        $productImage = $productData['image'];
     } else {
 
         header('Location: index.php');
@@ -23,8 +22,6 @@ if (isset($_GET['id'])) {
     exit();
 }
 
-$pageTitle = "Корнеева Е.С. 221-362";
-$currentDate = date('d.m.Y в H:i:s');
 ?>
 
 <!DOCTYPE html>
@@ -55,14 +52,13 @@ $currentDate = date('d.m.Y в H:i:s');
     <main>
     <main>
         <div class="product-details">
-            <div class="image-container">
-                <img src="<?php echo $productImage; ?>" alt="<?php echo $pageTitle; ?>">
+            <div class="image-containers">
+                <img src="<?php echo $productImage; ?>" alt="<?php echo $productName; ?>">
             </div>
-            <h2><?php echo $pageTitle; ?></h2>
+            <h2><?php echo $productName; ?></h2>
             <p>Цена: <?php echo $productPrice; ?></p>
             <p>В наличии (шт): <?php echo $productCount; ?></p>
-            <p>Подробное описание: <?php echo $productDescrtiptionBig; ?></p>
-            $pageTitle = $productData['name'];
+            <p>Подробное описание: <?php echo $productData['descriptionBig']; ?></p>
         </div>
     </main>
 

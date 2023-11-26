@@ -74,6 +74,16 @@ i {
     font-style: italic;
 }
 
+.src_text {
+    color: #2a6f9c;
+    font-style: italic;
+}
+
+.src_error {
+    color: #2a6f9c;
+    font-style: italic;
+}
+
 a {
     text-decoration: none;
     color: #3498db;
