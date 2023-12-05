@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Корнеева Е.С., Лабораторная №12</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body class="d-flex justify-content-center align-items-center"> <!-- делают элемент центрированным по горизонтали и по вертикали -->
+    <div class="container-fluid bg-light rounded shadow p-4 text-center"> 
+        <!-- container-fluid - контейнер 100% ширины окна браузера, растягивая его на всю доступную ширину.
+        bg-light - устанавливает светлый фон для контейнера.
+        rounded - скругление углов контейнера.
+        shadow - тень контейнера.
+        p-4 - внутренний отступ (padding) размером 1.5rem (15px по умолчанию) со всех сторон контейнера.
+        text-center - центрирует текст. -->
+
+        <div class="row bg-primary text-light rounded shadow d-flex justify-content-center align-items-center p-4">
+            <!-- row - это класс Bootstrap для создания строки внутри контейнера.
+                bg-primary - устанавливает цвет фона для строки в основной (первичной) цвет сайта. -->
+
+            <div class="col-md-6 col-sm-12"> 
+                <!--col-md-6 и col-sm-12 - это классы Bootstrap для определения ширины колонок в разных размерах экрана.-->
+                <h1>SmartTask Tracker</h1>
+                <p class="lead">SmartTask Tracker - это инновационное приложение для управления задачами и повышения
+                    производительности в рабочей среде. Основной целью приложения является предоставление эффективных
+                    инструментов для планирования, отслеживания и управления задачами в командных проектах.</p>
+                    <!--lead - увеличивает размер текста-->
+            </div>
+        </div>
+
+        <div class="row mt-4 text-center d-flex justify-content-center align-items-center p-4"><!--mt-4 - добавляет отступ (margin-top) величиной в 4 единицы.-->
+            <div class="col-md-6 col-sm-12">
+                <h2 class="mb-4">Особенности проекта</h2> <!-- mb-4 - добавляет отступ (margin-bottom) величиной в 4 единицы.-->
+                <ol class="list-unstyled"> <!--убрает стандартные маркеры в списке-->
+                    <li class="mb-2">Эффективное управление задачами с использованием искусственного интеллекта.</li>
+                    <li class="mb-2">Улучшенная коммуникация и взаимодействие в команде.</li>
+                    <li class="mb-2">Гибкие инструменты анализа для принятия обоснованных решений.</li>
+                    <li class="mb-2">Повышение производительности и сокращение времени выполнения проектов.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row mt-4 text-center d-flex justify-content-center align-items-center p-4">
+            <div class="col-md-6 col-sm-12">
+                <h2 class="mb-4">Свяжитесь с нами</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ваше имя</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Ваш Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+
+                <div class="mt-4">
+                    <h3>Контакты</h3>
+                    <p>Email: examplexxxx@gmail.com</p>
+                    <p>Телефон: +7(000)456-88-00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
